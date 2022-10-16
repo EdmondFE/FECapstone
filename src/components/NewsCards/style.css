@@ -1,0 +1,69 @@
+.main-container{
+    --bg-image: url('https://img.freepik.com/free-photo/newspaper-background-concept_23-2149501624.jpg?w=2000');
+    --opacity: .4;
+
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Poppins";
+    flex-direction: column;
+    position: relative;
+    background-size: 100%;
+    isolation: isolate;
+ 
+}
+
+.main-container::after{
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background-color: whitesmoke;
+    z-index: -1;
+    opacity: var(--opacity);
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+.tooltip{
+    display: flex;
+    position: fixed;
+    z-index: 2;
+}
+.tooltip:hover{
+    background-color: transparent;
+   
+}
+
+
+.modal::-webkit-scrollbar {
+    width: 4px;          /* width of the entire scrollbar */
+}
+
+.modal::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;        /* color of the tracking area */
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background-color: transparent;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+ /* creates padding around scroll thumb */
+    margin-right: 5px;
+}
+
+.logo-title{
+    letter-spacing: 5px;
+    font-family: 'TypeMachine';
+    background-image: linear-gradient(to left, #00ffcd 60%, #1348EF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-top: 5px;
+}
+.sub-title{
+    font-family: 'TypeMachine';
+    letter-spacing: 10px;
+    color:whitesmoke;
+    font-size: 2rem;
+    display: flex;
+   
+}
